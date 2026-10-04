@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Evently - Arjit's Live Concert</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🎟 Evently
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="my-tickets.html">My Tickets</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <div class="nav-icons">
+            🔍 👤
+        </div>
+
+    </header>
+
+
+    <!-- BOOKING HEADER -->
+
+    <section class="booking-header">
+
+        <h1>Book Your Ticket</h1>
+
+        <p>
+            Reserve your place for the event.
+        </p>
+
+    </section>
+
+
+    <!-- BOOKING CONTENT -->
+
+    <main class="booking-container">
+
+
+        <!-- EVENT DETAILS -->
+
+        <section class="selected-event">
+
+            <h2>
+                Shaam Live in Concert
+            </h2>
+
+            <p class="event-category">
+                Music • Main Auditorium
+            </p>
+
+            <div class="event-info">
+
+                <p>
+                    📅 <strong>Date:</strong>
+                    26 September 2026
+                </p>
+
+                <p>
+                    ⏰ <strong>Time:</strong>
+                    6:00 PM
+                </p>
+
+                <p>
+                    📍 <strong>Venue:</strong>
+                    Main Auditorium
+                </p>
+
+            </div>
+
+            <p class="booking-description">
+                Get ready for an unforgettable evening
+                filled with live music, entertainment
+                and amazing performances.
+            </p>
+
+            <p class="available-seats">
+                🎟 150 seats available
+            </p>
+
+        </section>
+
+
+        <!-- TICKET TYPES -->
+
+        <section class="ticket-types">
+
+            <h2>Choose Your Ticket</h2>
+
+
+            <!-- SILVER -->
+
+            <div class="ticket-option">
+
+                <div class="ticket-info">
+
+                    <h3>Silver</h3>
+
+                    <p>General entry</p>
+
+                    <strong>₹199</strong>
+
+                </div>
+
+                <div class="quantity">
+
+                    <button type="button">−</button>
+
+                    <span>0</span>
+
+                    <button type="button">+</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- GOLD -->
+
+            <div class="ticket-option">
+
+                <div class="ticket-info">
+
+                    <h3>Gold</h3>
+
+                    <p>Premium seating</p>
+
+                    <strong>₹399</strong>
+
+                </div>
+
+                <div class="quantity">
+
+                    <button type="button">−</button>
+
+                    <span>0</span>
+
+                    <button type="button">+</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- DIAMOND -->
+
+            <div class="ticket-option">
+
+                <div class="ticket-info">
+
+                    <h3>Diamond</h3>
+
+                    <p>VIP seating + special access</p>
+
+                    <strong>₹699</strong>
+
+                </div>
+
+                <div class="quantity">
+
+                    <button type="button">−</button>
+
+                    <span>0</span>
+
+                    <button type="button">+</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- USER DETAILS -->
+
+        <section class="user-details">
+
+            <h2>Your Details</h2>
+
+            <form>
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+
+                <label for="enrollment">
+                    Enrollment Number
+                </label>
+
+                <input
+                    type="text"
+                    id="enrollment"
+                    name="enrollment"
+                    placeholder="Enter your enrollment number"
+                    required
+                >
+
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+            </form>
+
+        </section>
+
+
+        <!-- PAYMENT -->
+
+        <section class="payment-section">
+
+            <h2>Payment</h2>
+
+            <p>
+                Scan the QR code below to make your payment.
+            </p>
+
+            <div class="qr-box">
+
+                <img
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Evently-Shaam-Live"
+                    alt="Payment QR Code"
+                >
+
+            </div>
+
+            <p class="payment-note">
+                📱 Scan using your UPI app.
+            </p>
+
+            <p class="payment-note">
+                This QR code is for demonstration purposes only.
+            </p>
+
+        </section>
+
+
+        <!-- BOOKING SUMMARY -->
+
+        <section class="booking-summary">
+
+            <h2>Booking Summary</h2>
+
+            <div class="summary-row">
+                <span>Silver Tickets</span>
+                <span>0 × ₹199</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Gold Tickets</span>
+                <span>0 × ₹399</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Diamond Tickets</span>
+                <span>0 × ₹699</span>
+            </div>
+
+            <hr>
+
+            <div class="summary-total">
+
+                <strong>Total</strong>
+
+                <strong>₹0</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONFIRM -->
+
+        <section class="booking-confirm">
+
+            <button type="button">
+                Confirm Booking
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Evently. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,1362 @@
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #05051c;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   NAVIGATION BAR
+========================================= */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 90%;
+    height: 90px;
+
+    padding: 0 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 1000;
+
+    background: transparent;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.nav-brand h2 {
+    color: #f4a9d5;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.nav-brand p {
+    margin-top: 5px;
+
+    color: white;
+    font-size: 9px;
+    letter-spacing: 4px;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 42px;
+
+    margin-left: auto;
+    margin-right: 45px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 16px;
+
+    padding: 10px 0;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff42b1;
+
+    text-shadow:
+        0 0 8px #ff42b1;
+}
+
+.nav-links a.active {
+    color: #ff42b1;
+
+    text-shadow:
+        0 0 8px #ff42b1;
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #ff42b1;
+
+    box-shadow:
+        0 0 8px #ff42b1,
+        0 0 15px #ff42b1;
+}
+
+
+/* =========================================
+   REGISTER NAV BUTTON
+========================================= */
+
+.register-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    min-width: 145px;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    border: 1px solid #ff38ad;
+
+    background: rgba(255, 30, 170, 0.15);
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 0 8px #ff38ad,
+        0 0 20px rgba(255, 56, 173, 0.5);
+
+    transition: 0.3s;
+}
+
+.register-nav span {
+    font-size: 20px;
+}
+
+.register-nav:hover {
+    background: #e52c98;
+
+    box-shadow:
+        0 0 15px #ff38ad,
+        0 0 35px rgba(255, 56, 173, 0.8);
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image: url("pu.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Dark overlay */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(3, 3, 25, 0.15);
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 600px;
+
+    margin-left: 11%;
+    margin-top: 50px;
+}
+
+.university {
+    font-size: 13px;
+
+    letter-spacing: 6px;
+
+    color: #f4c6df;
+
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 58px;
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    color: #ffe5f4;
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.hero-content h1 span {
+    display: block;
+
+    font-size: 75px;
+
+    font-style: italic;
+
+    color: #ff3ead;
+
+    text-shadow:
+        0 0 10px #ff3ead,
+        0 0 25px #ff3ead;
+}
+
+
+/* =========================================
+   HERO TAGLINE
+========================================= */
+
+.tagline {
+    margin-top: 25px;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #f0d5e7;
+}
+
+.tagline b {
+    color: #ff3ead;
+
+    margin: 0 5px;
+}
+
+
+/* =========================================
+   MAIN REGISTER BUTTON
+========================================= */
+
+.main-btn {
+    margin-top: 30px;
+
+    width: 220px;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    border: 2px solid #ff3ead;
+
+    background: rgba(255, 30, 170, 0.08);
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 10px #ff3ead,
+        0 0 25px rgba(255, 62, 173, 0.4);
+
+    transition: 0.3s;
+}
+
+.main-btn span {
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.main-btn:hover {
+    background: #e52c98;
+
+    box-shadow:
+        0 0 20px #ff3ead,
+        0 0 40px rgba(255, 62, 173, 0.7);
+}
+
+
+/* =========================================
+   HERO UPCOMING EVENT CARD
+========================================= */
+
+.event-card {
+    position: absolute;
+
+    right: 6%;
+    bottom: 17%;
+
+    z-index: 10;
+
+    width: 390px;
+    min-height: 120px;
+
+    padding: 14px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    border-radius: 18px;
+
+    border: 1px solid #ff3ead;
+
+    background: rgba(10, 5, 30, 0.88);
+
+    box-shadow:
+        0 0 15px rgba(255, 62, 173, 0.5);
+}
+
+.event-img {
+    width: 85px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #321044,
+        #d92a96
+    );
+
+    font-size: 30px;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-details p {
+    color: #ff45b3;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+}
+
+.event-details h3 {
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+.event-details span {
+    color: #cbb8c8;
+
+    font-size: 12px;
+}
+
+.arrow {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    border: 1px solid #ff45b3;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   ABOUT SECTION
+   NO BACKGROUND IMAGE
+========================================= */
+
+.about {
+    
+    min-height: 60vh;
+
+    padding: 110px 15%;
+
+    text-align: center;
+
+    background: #06061d;
+}
+
+.about h2 {
+    color: white;
+}
+
+.about h2 span {
+    color: #ff42b1;
+}
+
+.about > p:last-child {
+    margin-top: 20px;
+
+    color: #ddd;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   COMMON SMALL TITLE
+========================================= */
+
+.small-title {
+    color: #ff42b1;
+
+    letter-spacing: 5px;
+
+    font-size: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   UPCOMING EVENTS SECTION
+========================================= */
+
+.events {
+    min-height: 70vh;
+
+    padding: 100px 8%;
+
+    text-align: center;
+
+    background: #08081f;
+}
+
+.events h2 {
+    color: white;
+
+    font-size: 45px;
+
+    margin-bottom: 50px;
+
+    text-shadow:
+        0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+
+/* =========================================
+   EVENTS CONTAINER
+========================================= */
+
+.events-container {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 28px;
+}
+
+
+/* =========================================
+   EVENT BOX
+========================================= */
+
+.event-box {
+    width: 32%;
+
+    min-height: 470px;
+
+    background: rgba(20, 10, 45, 0.9);
+
+    border: 1px solid #ff2da8;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    box-shadow:
+        0 0 15px rgba(255, 45, 168, 0.35);
+
+    transition: 0.3s;
+}
+
+.event-box:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 0 20px rgba(255, 45, 168, 0.6),
+        0 0 40px rgba(255, 45, 168, 0.2);
+}
+
+
+/* =========================================
+   EVENT IMAGE
+========================================= */
+
+.event-image {
+    width: 100%;
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #321044,
+        #64145f,
+        #9b1878
+    );
+
+    font-size: 55px;
+
+    border-bottom: 1px solid #ff2da8;
+}
+
+
+/* =========================================
+   EVENT CONTENT
+========================================= */
+
+.event-content {
+    padding: 25px;
+}
+
+.event-label {
+    color: #ff42b1;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.event-content h3 {
+    color: white;
+
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+.event-description {
+    color: #cfc2d0;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+.event-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.event-info span {
+    color: #e5d6e2;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   EVENT REGISTER BUTTON
+========================================= */
+
+.event-register {
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    border: 1px solid #ff42b1;
+
+    border-radius: 25px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    background: rgba(255, 45, 168, 0.12);
+
+    transition: 0.3s;
+}
+
+.event-register:hover {
+    background: #e52c98;
+
+    box-shadow:
+        0 0 15px #ff42b1;
+}
+
+
+/* =========================================
+   SEE MORE BUTTON
+========================================= */
+
+.see-more-btn {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    color: #ff42b1;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+
+
+/* =========================================
+   EVENT INFORMATION SECTION
+========================================= */
+
+.event-details-section {
+    min-height: 100vh;
+
+    padding: 110px 8%;
+
+    background: #06061d;
+
+    text-align: center;
+}
+
+.event-details-section h2 {
+    color: white;
+
+    font-size: 45px;
+
+    margin-bottom: 55px;
+
+    text-shadow:
+        0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+
+/* =========================================
+   EVENT DETAILS CONTAINER
+========================================= */
+
+.event-details-container {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   EVENT DETAIL CARD
+========================================= */
+
+.event-detail-card {
+    width: 100%;
+    max-width: 950px;
+
+    padding: 35px;
+
+    background: rgba(20, 10, 45, 0.95);
+
+    border: 1px solid #ff2da8;
+
+    border-radius: 22px;
+
+    text-align: left;
+
+    box-shadow:
+        0 0 18px rgba(255, 45, 168, 0.35),
+        0 0 35px rgba(255, 45, 168, 0.1);
+
+    transition: 0.3s;
+}
+
+.event-detail-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 25px rgba(255, 45, 168, 0.55);
+}
+
+
+/* =========================================
+   DETAIL TOP
+========================================= */
+
+.detail-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.detail-icon {
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 15px;
+
+    background: linear-gradient(
+        135deg,
+        #321044,
+        #d92a96
+    );
+
+    font-size: 35px;
+
+    border: 1px solid #ff42b1;
+
+    box-shadow:
+        0 0 12px rgba(255, 45, 168, 0.4);
+}
+
+
+/* =========================================
+   DETAIL TITLE
+========================================= */
+
+.detail-top h3 {
+    color: white;
+
+    font-size: 30px;
+
+    margin-top: 7px;
+}
+
+.detail-top .event-label {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   DETAIL DESCRIPTION
+========================================= */
+
+.detail-description {
+    color: #d8c7d5;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   DETAIL INFORMATION
+========================================= */
+
+.detail-info {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.detail-info div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    background: rgba(5, 5, 28, 0.65);
+
+    border: 1px solid rgba(255, 66, 177, 0.2);
+}
+
+.detail-info strong {
+    color: #ff42b1;
+
+    font-size: 13px;
+}
+
+.detail-info span {
+    color: white;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   DETAIL REGISTER BUTTON
+========================================= */
+
+.detail-register {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    border: 1px solid #ff42b1;
+
+    border-radius: 25px;
+
+    color: white;
+
+    background: rgba(255, 45, 168, 0.12);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.detail-register:hover {
+    background: #e52c98;
+
+    box-shadow:
+        0 0 15px #ff42b1,
+        0 0 30px rgba(255, 45, 168, 0.5);
+}
+
+
+/* =========================================
+   TEAM SECTION
+========================================= */
+
+.team {
+    min-height: 100vh;
+
+    padding: 100px 5%;
+
+    background: #050518;
+
+    text-align: center;
+}
+
+.team h2 {
+    color: white;
+
+    font-size: 50px;
+
+    margin-bottom: 60px;
+
+    text-shadow:
+        0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+
+/* =========================================
+   TEAM CONTAINER
+========================================= */
+
+.team-container {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 35px;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   TEAM CARD
+========================================= */
+
+.team-card {
+    width: 280px;
+    height: 360px;
+
+    padding: 25px 20px;
+
+    background: rgba(20, 10, 45, 0.9);
+
+    border: 1px solid #ff2da8;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 15px rgba(255, 45, 168, 0.4);
+
+    flex-shrink: 0;
+
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 0 25px rgba(255, 45, 168, 0.6);
+}
+
+
+/* =========================================
+   TEAM PHOTO
+========================================= */
+
+.team-card img {
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid #ff2da8;
+
+    box-shadow:
+        0 0 15px #ff2da8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   TEAM TEXT
+========================================= */
+
+.team-card h3 {
+    color: white;
+
+    font-size: 22px;
+
+    margin: 5px 0 8px;
+}
+
+.team-card p {
+    color: #ff65bd;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   RESERVATION SECTION
+========================================= */
+
+.reservation {
+    min-height: 100vh;
+
+    padding: 100px 8%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            rgba(5, 5, 28, 0.72),
+            rgba(5, 5, 28, 0.82)
+        ),
+        url("pu.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================
+   RESERVATION OVERLAY / BOX
+========================================= */
+
+.reservation-overlay {
+    width: 100%;
+    max-width: 900px;
+
+    padding: 45px;
+
+    background: rgba(10, 5, 35, 0.88);
+
+    border: 1px solid #ff2da8;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 20px rgba(255, 45, 168, 0.4),
+        0 0 50px rgba(255, 45, 168, 0.15);
+}
+
+.reservation-overlay h1 {
+    text-align: center;
+
+    color: white;
+
+    font-size: 42px;
+
+    margin-bottom: 35px;
+
+    text-shadow:
+        0 0 12px rgba(255, 66, 177, 0.4);
+}
+
+
+/* =========================================
+   RESERVATION FORM
+========================================= */
+
+.reservation-overlay form {
+    width: 100%;
+}
+
+
+/* =========================================
+   FORM LABELS
+========================================= */
+
+.reservation-overlay form > label {
+    display: block;
+
+    color: #f4d5e8;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   FORM INPUTS
+========================================= */
+
+.reservation-overlay input[type="text"],
+.reservation-overlay input[type="email"],
+.reservation-overlay input[type="tel"],
+.reservation-overlay input[type="number"] {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    margin-bottom: 20px;
+
+    background: rgba(5, 5, 28, 0.85);
+
+    border: 1px solid #70405f;
+
+    border-radius: 10px;
+
+    color: white;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.reservation-overlay input:focus {
+    border-color: #ff42b1;
+
+    box-shadow:
+        0 0 8px rgba(255, 66, 177, 0.5);
+}
+
+.reservation-overlay input::placeholder {
+    color: #8f7d8a;
+}
+
+
+/* =========================================
+   TICKET TYPE
+========================================= */
+
+.ticket-type {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 10px 0 25px;
+}
+
+.ticket-type label {
+    flex: 1;
+
+    padding: 13px;
+
+    text-align: center;
+
+    color: #e2d1dd;
+
+    background: rgba(5, 5, 28, 0.8);
+
+    border: 1px solid #70405f;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.ticket-type label:hover {
+    border-color: #ff42b1;
+
+    color: white;
+}
+
+.ticket-type input {
+    margin-right: 7px;
+
+    accent-color: #ff42b1;
+}
+
+
+/* =========================================
+   NUMBER OF TICKETS
+========================================= */
+
+.reservation-overlay input[type="number"] {
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   RESERVE BUTTON
+========================================= */
+
+.reserve-btn {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ff38ad;
+
+    border-radius: 30px;
+
+    background: rgba(255, 30, 170, 0.15);
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 8px #ff38ad,
+        0 0 20px rgba(255, 56, 173, 0.4);
+
+    transition: 0.3s;
+}
+
+.reserve-btn:hover {
+    background: #e52c98;
+
+    box-shadow:
+        0 0 15px #ff38ad,
+        0 0 35px rgba(255, 56, 173, 0.8);
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #070018;
+    border-top: 1px solid #ff2bb5;
+    box-shadow: 0 -5px 25px rgba(255, 43, 181, 0.25);
+    padding: 60px 8% 20px;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-brand {
+    max-width: 350px;
+}
+
+.footer-brand h2 {
+    font-size: 28px;
+    color: #ff3dbf;
+    margin-bottom: 15px;
+    text-shadow: 0 0 12px rgba(255, 61, 191, 0.7);
+}
+
+.footer-brand p {
+    color: #cfc8dc;
+    line-height: 1.6;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-links a {
+    color: #cfc8dc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff3dbf;
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    color: #cfc8dc;
+    margin: 0;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 43, 181, 0.3);
+    margin-top: 45px;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    color: #aaa;
+    font-size: 14px;
+}
+    }
+
+}

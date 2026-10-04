@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VIP Sports Day Entry Pass</title>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #07030d;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+
+        min-height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* MAIN ENTRY PASS */
+
+    .entry-pass {
+        width: 650px;
+        min-height: 560px;
+
+        background-color: #12001f;
+
+        border: 2px solid #9b4dff;
+
+        border-radius: 25px;
+
+        box-shadow:
+            0 0 15px #9b4dff,
+            0 0 40px rgba(155, 77, 255, 0.45);
+
+        overflow: hidden;
+    }
+
+
+    /* HEADER */
+
+    .pass-header {
+
+        height: 90px;
+
+        background: linear-gradient(
+            90deg,
+            #3b0764,
+            #9b4dff,
+            #3b0764
+        );
+
+        color: white;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        padding: 0 35px;
+    }
+
+
+    .pass-header h1 {
+
+        font-size: 25px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .pass-header p {
+
+        font-size: 13px;
+
+        font-weight: bold;
+
+        letter-spacing: 4px;
+    }
+
+
+    /* MAIN CONTENT */
+
+    .pass-content {
+
+        padding: 40px 35px;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        gap: 40px;
+    }
+
+
+    /* LEFT DETAILS */
+
+    .details {
+
+        width: 52%;
+    }
+
+
+    .event-name {
+
+        color: #c77dff;
+
+        font-size: 35px;
+
+        margin-bottom: 30px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .details-box {
+
+        margin-bottom: 18px;
+
+        padding-bottom: 10px;
+
+        border-bottom: 1px solid #43205c;
+    }
+
+
+    .details-box p {
+
+        color: #b99aca;
+
+        font-size: 11px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 6px;
+    }
+
+
+    .details-box h3 {
+
+        color: white;
+
+        font-size: 16px;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* VIP BADGE */
+
+    .vip-label {
+
+        display: inline-block;
+
+        margin-top: 10px;
+
+        padding: 10px 22px;
+
+        border: 1px solid #9b4dff;
+
+        border-radius: 25px;
+
+        color: #d9a7ff;
+
+        font-size: 12px;
+
+        font-weight: bold;
+
+        letter-spacing: 2px;
+
+        box-shadow:
+            0 0 10px rgba(155, 77, 255, 0.5);
+    }
+
+
+    /* QR SECTION */
+
+    .qr-section {
+
+        width: 40%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+    }
+
+
+    .qr-section img {
+
+        width: 210px;
+
+        height: 210px;
+
+        padding: 10px;
+
+        background-color: white;
+
+        border-radius: 12px;
+
+        border: 3px solid #9b4dff;
+
+        box-shadow:
+            0 0 15px #9b4dff,
+            0 0 30px rgba(155, 77, 255, 0.5);
+    }
+
+
+    .scan-text {
+
+        margin-top: 20px;
+
+        color: #c77dff;
+
+        font-size: 14px;
+
+        text-align: center;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* VALID VIP PASS */
+
+    .valid-pass {
+
+        margin-top: 20px;
+
+        padding: 10px 18px;
+
+        border: 1px solid #9b4dff;
+
+        border-radius: 25px;
+
+        color: #d9a7ff;
+
+        font-size: 12px;
+
+        font-weight: bold;
+
+        letter-spacing: 1px;
+
+        box-shadow:
+            0 0 10px rgba(155, 77, 255, 0.4);
+    }
+
+
+    /* FOOTER */
+
+    .pass-footer {
+
+        min-height: 85px;
+
+        background-color: #09000f;
+
+        border-top: 1px solid #43205c;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        padding: 20px 35px;
+    }
+
+
+    .pass-footer p {
+
+        color: #c9bdd0;
+
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+
+
+    /* BACK BUTTON */
+
+    .back-button {
+
+        padding: 13px 25px;
+
+        border-radius: 25px;
+
+        background: linear-gradient(
+            90deg,
+            #6a1bb1,
+            #9b4dff
+        );
+
+        color: white;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+        font-size: 13px;
+
+        letter-spacing: 1px;
+
+        box-shadow:
+            0 0 15px rgba(155, 77, 255, 0.5);
+    }
+
+
+    .back-button:hover {
+
+        background: #c77dff;
+
+        color: #170020;
+    }
+
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<div class="entry-pass">
+
+
+    <!-- HEADER -->
+
+    <div class="pass-header">
+
+        <h1>PU CampusPass</h1>
+
+        <p>VIP ENTRY PASS</p>
+
+    </div>
+
+
+    <!-- PASS CONTENT -->
+
+    <div class="pass-content">
+
+
+        <!-- PERSON DETAILS -->
+
+        <div class="details">
+
+            <h2 class="event-name">
+                SPORTS DAY
+            </h2>
+
+
+            <div class="details-box">
+
+                <p>NAME</p>
+
+                <h3>
+                    RUKSANA VENKTAPUR
+                </h3>
+
+            </div>
+
+
+            <div class="details-box">
+
+                <p>EMAIL</p>
+
+                <h3>
+                    ruksanavenktapur2@gmail.com
+                </h3>
+
+            </div>
+
+
+            <div class="details-box">
+
+                <p>PHONE</p>
+
+                <h3>
+                    +91 74996 31117
+                </h3>
+
+            </div>
+
+
+            <div class="details-box">
+
+                <p>TICKET TYPE</p>
+
+                <h3>
+                    VIP PASS
+                </h3>
+
+            </div>
+
+
+            <div class="details-box">
+
+                <p>NUMBER OF TICKETS</p>
+
+                <h3>
+                    1
+                </h3>
+
+            </div>
+
+
+            <div class="details-box">
+
+                <p>DATE</p>
+
+                <h3>
+                    15 DECEMBER 2026
+                </h3>
+
+            </div>
+
+
+            <div class="details-box">
+
+                <p>VENUE</p>
+
+                <h3>
+                    PARUL UNIVERSITY GOA
+                </h3>
+
+            </div>
+
+
+            <span class="vip-label">
+                ★ VIP ACCESS ★
+            </span>
+
+        </div>
+
+
+        <!-- QR CODE -->
+
+        <div class="qr-section">
+
+
+
+            <img src="qr.png"
+                 alt="Sports Day VIP QR Code">
+
+
+            <p class="scan-text">
+
+                Scan this QR code<br>
+
+                at the entrance
+
+            </p>
+
+
+            <div class="valid-pass">
+
+                ✓ VALID VIP PASS
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="pass-footer">
+
+        <p>
+
+            Please carry this pass during the event.<br>
+
+            Show the QR code at the VIP entrance.
+
+        </p>
+
+
+        <a href="index.html" class="back-button">
+
+            BACK TO EVENTS →
+
+        </a>
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>

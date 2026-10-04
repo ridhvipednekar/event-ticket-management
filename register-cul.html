@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>REGISTRATION PORTAL</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <section id="registration" class="reservation">
+  <div class="reservation-overlay">
+
+        <h1>RESERVE YOUR TICKET</h1>
+
+        
+            <form action="payment-cul.html">
+
+            <div class="form-group">
+              
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name"></div>
+
+            <!-- Email -->
+             <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email"></div>
+
+            <!-- Phone -->
+             <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"></div>
+
+            <!-- Ticket Type -->
+            
+
+            <div class="form-group">
+
+                <label>Ticket Type:</label><br><br>
+                <div class="ticket-types">
+
+                  <label class="ticket-option">
+                    <input type="radio" name="ticket" value="student">
+                    <span>STANDARD</span>
+                  </label>
+                
+                    
+ <label class="ticket-option">
+                        <input type="radio" name="ticket" value="general">
+                        <span>PREMIUM</span>
+                    </label>
+
+                    <label class="ticket-option">
+                        <input type="radio" name="ticket" value="vip">
+                        <span>VIP</span>
+                    </label><br><br>
+
+
+            </div>
+        </div>
+
+            <!-- Number of Tickets -->
+             <div class="form-group">
+            <label for="tickets">Number of Tickets:</label>
+
+            <input type="number"
+                   id="tickets"
+                   name="tickets"
+                   min="1"
+                   max="10"
+                   value="1"></div>
+
+            <!-- Reserve Button -->
+             <button type="Submit" class="reserve-btn"> RESERVE TICKET</button>
+            
+
+        </form>
+
+    </div>
+</section>
+
+
+ </body>
+ </html>
